@@ -73,6 +73,12 @@ variable "ebs_root_volume_size" {
   default     = 8
 }
 
+variable "ebs_volume_type" {
+  description = "Volume type to use for ebs volume of the NAT instance"
+  type        = string
+  default     = "gp3"
+}
+
 variable "eip_allocation_ids" {
   description = "EIP allocation IDs to use for the NAT instance. Automatically assign a public IP if none is provided. Note: Currently only supports at most one EIP allocation."
   type        = list(string)

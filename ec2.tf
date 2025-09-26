@@ -67,7 +67,7 @@ resource "aws_launch_template" "main" {
 
     ebs {
       volume_size = var.ebs_root_volume_size
-      volume_type = "gp3"
+      volume_type = var.ebs_volume_type
       encrypted   = var.encryption
       kms_key_id  = var.kms_key_id
     }
